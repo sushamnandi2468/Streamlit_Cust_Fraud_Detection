@@ -1,0 +1,33 @@
+﻿First_Name,Last_Name,DOB,Customer_Type,PAN,Deceased_Flag,Gender,Martial_Status,PEP_Flag,CTF_Flag,Country_of_residence,Country_of_Origin
+SAED,ELHOORIE,07-12-1965,3,513963069,TRUE,M,Married,TRUE,TRUE,North Korea,China
+SAJID,MIR,18-09-1978,1,712244881,TRUE,M,Not Married,FALSE,FALSE,Pakistan,Pakistan
+ABD,AWDA,22-12-1950,1,195875084,TRUE,M,Married,TRUE,TRUE,Syria,Pakistan
+DANIEL,ANDREAS,20-03-1978,3,371830649,TRUE,M,Married,FALSE,FALSE,United States,United States
+HUSAM,ABDALRAUF,13-08-1958,1,358392608,FALSE,M,Married,TRUE,FALSE,Egypt,Egypt
+JABER,ELBANEH,06-06-1966,1,263125394,FALSE,M,Married,FALSE,TRUE,Yemen,Russia
+IBRAHIM,SALIH,14-10-1966,1,113728228,FALSE,M,Not Married,TRUE,TRUE,Russia,SauDiArabia
+Nicolea,Hanse,28-01-1988,2,552973761,FALSE,F,Married,FALSE,FALSE,Thailand,Peru
+Donica,Rishworth,10-07-1992,2,474602354,FALSE,F,Married,FALSE,FALSE,Portugal,Russia
+Hyacinthe,Goodding,30-01-2005,5,452023261,FALSE,M,Married,FALSE,FALSE,China,Indonesia
+Kira,Leguay,25-02-2008,3,356024099,FALSE,M,Married,FALSE,FALSE,Namibia,Vietnam
+Niels,Santi,12-04-1975,3,736196369,FALSE,M,Not Married,FALSE,FALSE,Greece,Finland
+Delphine,Asbrey,24-03-2000,4,636970510,FALSE,F,Not Married,FALSE,FALSE,Poland,Somalia
+Lowe,Tebboth,16-09-1977,5,195035588,FALSE,F,Not Married,FALSE,FALSE,China,China
+Romy,Hissie,28-11-1986,3,617360670,FALSE,F,Married,FALSE,FALSE,Ukraine,China
+Bat,Gumey,06-12-1976,4,871350748,FALSE,M,Married,FALSE,FALSE,Czech Republic,Russia
+Donavon,Filippo,14-05-2015,4,272023109,FALSE,M,Not Married,FALSE,FALSE,China,China
+Cordie,Burdon,01-12-1975,4,152618255,FALSE,F,Not Married,FALSE,FALSE,Bangladesh,Burundi
+Roger,Tomley,23-08-1977,5,876795517,FALSE,F,Not Married,FALSE,FALSE,Brazil,Madagascar
+Nani,Issard,13-11-1975,4,639568947,FALSE,F,Married,FALSE,FALSE,Central African Republic,Indonesia
+Abeu,Aspenlon,27-04-1998,3,542651258,FALSE,F,Married,FALSE,FALSE,China,Tajikistan
+Hayyim,Bockings,19-10-2010,4,591192886,FALSE,M,Married,FALSE,FALSE,Ukraine,El Salvador
+Elijah,Girod,29-05-1988,5,432500808,FALSE,M,Not Married,FALSE,FALSE,China,Thailand
+Pearce,Hinsche,18-11-2004,2,261813323,FALSE,M,Not Married,FALSE,FALSE,Philippines,Japan
+Karin,Doni,21-01-2001,3,484794114,FALSE,M,Married,FALSE,FALSE,Russia,Mexico
+Donall,Murdy,08-02-2006,5,679507508,FALSE,M,Married,FALSE,FALSE,France,Russia
+Rodrique,Cathery,21-07-1975,2,383100320,FALSE,M,Not Married,FALSE,FALSE,Russia,United States
+Jenine,Hansed,03-08-2010,5,420375146,FALSE,F,Not Married,FALSE,FALSE,China,Cyprus
+Grace,Robinet,10-04-2004,5,296801024,FALSE,F,Not Married,FALSE,FALSE,France,China
+Llewellyn,Collingwood,31-05-1979,3,528758689,FALSE,F,Not Married,FALSE,FALSE,Indonesia,Thailand
+Keely,Covil,04-09-1978,2,291162749,FALSE,F,Not Married,FALSE,FALSE,Russia,Philippines
+Elisa,Arnecke,16-08-1977,2,706479192,FALSE,M,Not Married,FALSE,FALSE,Thailand,China
