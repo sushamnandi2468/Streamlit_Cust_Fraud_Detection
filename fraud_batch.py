@@ -6,6 +6,29 @@ import os
 import streamlit as st
 import datetime
 from nltk.tokenize.treebank import TreebankWordDetokenizer as wd
+import seaborn as sns
+import base64
+from pathlib import Path
+import matplotlib.pyplot as plt
+
+def img_to_bytes(img_path):
+    img_bytes = Path(img_path).read_bytes()
+    encoded = base64.b64encode(img_bytes).decode()
+    return encoded
+
+header_html = "<img src='data:image/png;base64,{}' class='img-fluid' width='300' height='240'>".format(
+    img_to_bytes("CG_Invent.PNG")
+)
+st.markdown(
+    header_html, unsafe_allow_html=True,
+)
+
+sidebar_html = "<img src='data:image/png;base64,{}' class='img-fluid' width='200' height='160'>".format(
+    img_to_bytes("DRR.PNG")
+)
+st.sidebar.markdown(
+    sidebar_html, unsafe_allow_html=True,
+)
 
 #Title
 st.write("""
@@ -27,8 +50,8 @@ def get_user_input():
 user_input = get_user_input()
 
 #Display User Input
-st.subheader('User Input:')
-st.write(user_input)
+#st.subheader('User Input:')
+#st.write(user_input)
 
 #Load machine learning models
 path_to_artifacts = os.path.normpath(os.getcwd())
@@ -41,6 +64,9 @@ wi_ln = joblib.load(path_to_artifacts + "\wi_ln_CFD.joblib")
 def preprocessing(input_data):
     # JSON to pandas DataFrame
     #input_data = pd.DataFrame(input_data, index=[0])
+    input_data["First_Name"] = input_data["First_Name"].str.lower()
+    input_data["Last_Name"] = input_data["Last_Name"].str.lower()
+
     try:       
         input_data = input_data.replace({"First_Name" : wi_fn})
         input_data = input_data.replace({"Last_Name" : wi_ln})
@@ -60,8 +86,8 @@ def preprocessing(input_data):
     #input_data = input_data.replace({"Customer_Type" : cust_type})
     #st.write("Cust_Type replaced")
     deceased_flag={
-        'Yes' : 1,
-        'No' : 0
+        True : 1,
+        False : 0
     }
 
     input_data = input_data.replace({'Deceased_flag' : deceased_flag})
@@ -96,7 +122,7 @@ def preprocessing(input_data):
 
     input_data = input_data.replace({'Country_of_residence' : df_country_dict})
     input_data = input_data.replace({'Country_of_Origin' : df_country_dict})
-    #st.write(input_data)
+    st.write(input_data)
     return input_data
 
 #user_input_pr=preprocessing(user_input)
@@ -105,9 +131,9 @@ def predict(input_data):
         
 def postprocessing(input_data):
     if input_data[1] == 0:
-        label = 'Fraud'
+        label = 'False Positive'
     else :
-        label = 'Not Fraud'
+        label = 'Fraud'
     return {"probability": input_data[1], "label": label, "status": "OK"}
         
 def compute_prediction(input_data):
@@ -136,8 +162,37 @@ def compute_prediction(input_data):
 
     return output_data
 
-    
 #Predcition
 prediction=compute_prediction(user_input)
 st.subheader('Classification:')
+
+# function for set text color of False Positive 
+# values in Dataframes 
+def color_positive_red(val): 
+	""" 
+	Takes a scalar and returns a string with 
+	the css property `'color: green'` for positive 
+	strings, black otherwise. 
+	"""
+	if val == 'False Positive': 
+		color = 'green'
+	else: 
+		color = 'black'
+	return 'color: %s' % color 
+
 st.write(prediction[['First_Name', 'Last_Name', 'PAN' ,'label']])
+plt.title('Number of Flase Positives Captured')
+plt.xlabel('Classification')
+plt.ylabel('Count')
+
+# fix the legend
+current_handles, _ = plt.gca().get_legend_handles_labels()
+reversed_handles = reversed(current_handles)
+
+labels = reversed(prediction['label'].unique())
+
+plt.legend(reversed_handles,labels,loc='lower right')
+
+prediction.groupby('label')['PAN'].nunique().plot(kind='bar')
+st.set_option('deprecation.showPyplotGlobalUse', False)
+st.pyplot()

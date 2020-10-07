@@ -1,6 +1,5 @@
 ﻿First_Name,Last_Name,DOB,Customer_Type,PAN,Deceased_Flag,Gender,Martial_Status,PEP_Flag,CTF_Flag,Country_of_residence,Country_of_Origin
 asdsad,fdgdfgdfg,07-12-1965,3,513963069,TRUE,M,Married,TRUE,TRUE,North Korea,China
-SAED,aaaaaa,07-12-1965,3,513963069,TRUE,M,Married,TRUE,TRUE,North Korea,China
 SAED,ELHOORIE,07-12-1965,3,513963069,TRUE,M,Married,TRUE,TRUE,North Korea,China
 SAJID,MIR,18-09-1978,1,712244881,TRUE,M,Not Married,FALSE,FALSE,Pakistan,Pakistan
 ABD,AWDA,22-12-1950,1,195875084,TRUE,M,Married,TRUE,TRUE,Syria,Pakistan
