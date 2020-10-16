@@ -1,0 +1,1 @@
+web: sh setup.sh && streamlit run fraud_batch1.py

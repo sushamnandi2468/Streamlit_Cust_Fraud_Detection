@@ -1,0 +1,7 @@
+joblib==0.14.1
+nltk==3.4.5
+seaborn==0.10.0
+matplotlib==3.1.3
+pandas==1.0.1
+streamlit==0.67.0
+Pillow==8.0.0
