@@ -56,9 +56,13 @@ if st.checkbox('Show User Input'):
 
 #Load machine learning models
 path_to_artifacts = os.path.normpath(os.getcwd())
-model = joblib.load(path_to_artifacts + "\FDTree.joblib")
-wi_fn = joblib.load(path_to_artifacts + "\wi_fn.joblib")
-wi_ln = joblib.load(path_to_artifacts + "\wi_ln.joblib")
+#model = joblib.load(path_to_artifacts + "\FDTree.joblib")
+#wi_fn = joblib.load(path_to_artifacts + "\wi_fn.joblib")
+#wi_ln = joblib.load(path_to_artifacts + "\wi_ln.joblib")
+#To try to fix it in heroku
+model = joblib.load(path_to_artifacts + "/FDTree.joblib")
+wi_fn = joblib.load(path_to_artifacts + "/wi_fn.joblib")
+wi_ln = joblib.load(path_to_artifacts + "/wi_ln.joblib")
 
 #Identify New Customers
 def new_customer_identification(input_data):
